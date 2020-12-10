@@ -1,6 +1,6 @@
 
 /**
-* Mask 模块的默认配置
+* Masker 模块的默认配置
 * @name Masker.defaults
 */
 module.exports = {
