@@ -1,6 +1,6 @@
 {
   "name": "@definejs/masker",
-  "version": "0.1.9",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -13,10 +13,10 @@
     "url": "https://github.com/definejs/masker.git"
   },
   "dependencies": {
-    "@definejs/emitter": "^0.1.3",
-    "@definejs/object": "1.0.6",
-    "@definejs/string": "^0.1.4",
-    "@definejs/style": "^0.1.0",
+    "@definejs/emitter": "^1.0.0",
+    "@definejs/object": "^1.1.0",
+    "@definejs/string": "^1.0.0",
+    "@definejs/style": "^1.0.0",
     "jquery": "^3.5.1"
   }
 }
