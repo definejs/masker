@@ -5,6 +5,11 @@
 */
 module.exports = {
     /**
+    * 生成组件时的 id 前缀。
+    * 建议保留现状。
+    */
+    idPrefix: 'definejs-Masker',
+    /**
     * 指定是否易消失，即点击 mask 层就是否隐藏/移除。
     * 可取值为: true|false|"hide"|"remove"，默认为 false，即不易消失。
     */

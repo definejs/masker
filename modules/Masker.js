@@ -36,6 +36,7 @@ class Masker {
         //对外暴露的属性。
         Object.assign(this, {
             'id': meta.id,
+            '$': null,
         });
 
     }
@@ -118,9 +119,7 @@ class Masker {
     *       fadeIn: 200,    //可选。 需要淡入的动画时间，如果不指定或为指定为 0，则禁用淡入动画。
     *   };
     */
-    show(config) {
-        config = config || {};
-
+    show(config = {}) {
         let meta = mapper.get(this);
         let duration = 'duration' in config ? config.duration : meta.duration;
         let fadeIn = 'fadeIn' in config ? config.fadeIn : meta.fadeIn;
@@ -167,9 +166,7 @@ class Masker {
     *       fadeOut: 200,    //可选。 需要淡出的动画时间，如果不指定或为指定为 0，则禁用淡出动画。
     *   };
     */
-    hide(config) {
-        config = config || {};
-
+    hide(config = {}) {
         let meta = mapper.get(this);
         let fadeOut = 'fadeOut' in config ? config.fadeOut : meta.fadeOut;
 

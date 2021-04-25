@@ -1,18 +1,16 @@
-﻿const $String = require('@definejs/string');
+﻿const IDMaker = require('@definejs/id-maker');
 
-const prefix = 'definejs-masker-';    //用于生成组件 id 的前缀部分。
-const suffix = 4;                     //用于生成组件 id 的随机部分的长度。
 
 
 module.exports = {
 
     create(config, others) {
-        let id = $String.randomId(prefix, suffix);
+        let maker = new IDMaker(config.idPrefix);
         let eventName = config.eventName;
         let volatile = config.volatile;
 
         let meta = {
-            'id': id,
+            'id': maker.next(),
             'sample': '',
             'eventName': eventName,         //兼容 PC 端和移动端。 PC 端的为 `click`，移动端的为 `touch`。
             'volatile': volatile,           //是否易消失的。 即点击后自动隐藏。
